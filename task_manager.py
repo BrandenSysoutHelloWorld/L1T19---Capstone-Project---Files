@@ -192,6 +192,7 @@ def fetch_statistics():
     view_dict = {'total-users': total_users, 'total-tasks': total_tasks}
     return view_dict
 
+# Special Menu Section
 while True and authenticated_user.get('username') == 'admin':
     # Present the menu to the user and 
     # make sure that the user input is converted to lower case.
@@ -233,6 +234,8 @@ e - exit
     else:
         print("You have made entered an invalid input. Please try again")
         continue
+
+# Standard Menu Section
 else:
     while True:
         # Present the menu to the user and 
@@ -244,7 +247,7 @@ else:
     e - exit
     : ''').lower()
         
-        if standard_menu == 'a':
+        if standard_menu == 'a': # ADD TASK
             add_task()
         elif standard_menu == 'va':
             tasks = fetch_tasks('all')
@@ -264,3 +267,4 @@ else:
         else:
             print("You have made entered an invalid input. Please try again")
             continue
+# EOF - Branden v Staden
